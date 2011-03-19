@@ -15,4 +15,6 @@ group :test, :development do
   gem "rspec-rails", "~> 2.5"
   gem 'spork', '>=0.9.0.rc4'
   gem 'watchr'
+  gem 'capybara'
+  gem 'launchy'
 end
