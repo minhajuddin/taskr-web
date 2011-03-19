@@ -1,0 +1,9 @@
+!!!
+%html
+  %head
+    %title Taskr
+    %link{ :rel=>"stylesheet/less", :type=> "text/css", :href=> "/stylesheets/screen.less" }
+    = javascript_include_tag 'application', 'less'
+    = csrf_meta_tag
+  %body
+    =yield
