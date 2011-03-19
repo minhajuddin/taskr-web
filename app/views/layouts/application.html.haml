@@ -2,8 +2,8 @@
 %html
   %head
     %title Taskr
-    %link{ :rel=>"stylesheet/less", :type=> "text/css", :href=> "/stylesheets/screen.less" }
-    = javascript_include_tag 'application', 'less'
+    %link{ :rel=>"stylesheet/less", :type=> "text/css", :href=> "/stylesheets/screen.less" }/
+    = javascript_include_tag 'jquery.min', 'jquery-ui.min', 'less', 'application'
     = csrf_meta_tag
   %body
     =yield
