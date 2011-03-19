@@ -33,7 +33,6 @@ GEM
     bson (1.2.4)
     bson_ext (1.2.4)
     builder (2.1.2)
-    cancan (1.6.2)
     daemons (1.1.0)
     devise (1.1.8)
       bcrypt-ruby (~> 2.1.2)
@@ -109,7 +108,6 @@ PLATFORMS
 DEPENDENCIES
   bson
   bson_ext
-  cancan
   devise
   haml (>= 3.0.0)
   mongoid (= 2.0.0.beta.20)
