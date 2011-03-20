@@ -3,6 +3,7 @@
 %table
   -@projects.each do |p|
     %tr
-      %td=p.name
       %td
-        %a{:href => '#'} Edit
+        =link_to p.name, project_path(p)
+      %td
+        =link_to 'Edit', edit_project_path(p)
