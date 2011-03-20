@@ -48,6 +48,7 @@ GEM
     configuration (1.2.0)
     culerity (0.2.15)
     daemons (1.1.0)
+    database_cleaner (0.6.6)
     devise (1.1.8)
       bcrypt-ruby (~> 2.1.2)
       warden (~> 1.0.2)
@@ -119,6 +120,7 @@ GEM
       ffi (~> 0.6.3)
       json_pure
       rubyzip
+    shoulda (2.11.3)
     spork (0.9.0.rc4)
     thin (1.2.8)
       daemons (>= 1.0.9)
@@ -142,6 +144,7 @@ DEPENDENCIES
   bson
   bson_ext
   capybara
+  database_cleaner
   devise
   haml (>= 3.0.0)
   jquery-rails
@@ -149,6 +152,7 @@ DEPENDENCIES
   mongoid (= 2.0.0.beta.20)
   rails (= 3.0.5)
   rspec-rails (~> 2.5)
+  shoulda
   spork (>= 0.9.0.rc4)
   thin
   watchr

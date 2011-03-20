@@ -1,4 +1,6 @@
 require 'spork'
+require 'shoulda'
+require 'database_cleaner'
 
 Spork.prefork do
   # Loading more in this block will cause your tests to run faster. However,
@@ -24,6 +26,23 @@ Spork.prefork do
     # config.mock_with :flexmock
     # config.mock_with :rr
     config.mock_with :rspec
+    config.include Devise::TestHelpers, :type => :controller
+
+    config.include Devise::TestHelpers, :type => :controller
+
+    DatabaseCleaner.strategy = :truncation
+
+    config.before(:suite) do
+      DatabaseCleaner.clean_with(:truncation)
+    end
+
+    config.before(:each) do
+      DatabaseCleaner.start
+    end
+
+    config.after(:each) do
+      DatabaseCleaner.clean
+    end
 
     # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
     #config.fixture_path = "#{::Rails.root}/spec/fixtures"
@@ -38,7 +57,7 @@ end
 
 Spork.each_run do
   # This code will be run each time you run your specs.
-
+  require 'shoulda/integrations/rspec2'
 end
 
 # --- Instructions ---
@@ -69,7 +88,3 @@ end
 #
 # These instructions should self-destruct in 10 seconds.  If they don't, feel
 # free to delete them.
-
-
-
-
