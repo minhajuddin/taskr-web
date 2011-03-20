@@ -1,0 +1,8 @@
+%h2 Projects
+
+%table
+  -@projects.each do |p|
+    %tr
+      %td=p.name
+      %td
+        %a{:href => '#'} Edit
