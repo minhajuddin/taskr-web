@@ -3,6 +3,9 @@ Taskr::Application.routes.draw do
   root :to => 'home#index'
 
   resources :projects
+  #resources :projects do |r|
+    #r.resources :issues
+  #end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

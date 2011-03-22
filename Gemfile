@@ -26,4 +26,5 @@ group :test do
   gem 'launchy'
   gem 'shoulda'
   gem 'database_cleaner'
+  gem 'mongoid-rspec'
 end
