@@ -20,4 +20,10 @@ describe "Projects" do
     #save_and_open_page
   end
 
+  it "should show an existing project" do
+      project = Project.create! :name => "Khalid CMS"
+      visit project_path(project)
+      page.should have_content("Khalid CMS")
+  end
+
 end
