@@ -1,11 +1,11 @@
 Taskr::Application.routes.draw do
+
   devise_for :users
   root :to => 'home#index'
 
-  resources :projects
-  #resources :projects do |r|
-    #r.resources :issues
-  #end
+  resources :projects do
+    resources :tasks
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
